@@ -7,6 +7,8 @@ export const initialSeats = {
 export function createSeats(rows, cols) {
   return Array.from({ length: rows * cols }, (_, i) => ({
     id: i,
+    row: 1,
+    col: 1,
     person: null,
     fixed: false
   }))
