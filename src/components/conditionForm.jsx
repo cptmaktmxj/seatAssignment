@@ -16,3 +16,4 @@ function grid(){
     
 }
 
+//행과 열 설정하는 폼 input type="number" , 그리고 조건 설정 모달
