@@ -1,3 +1,5 @@
+import {useState} from 'react'
+
 export const initialSeats = {
   rows: 8,
   cols: 8,
