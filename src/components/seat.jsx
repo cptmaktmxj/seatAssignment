@@ -1,1 +1,7 @@
-//자리 클릭 시 동작, 자리 고정 시 어떻게 띄울지 설정, 자리 이미지, 자리에 부여된 사람 표시
+
+
+function showSeats({seat.fixed},{seat.removed},{seat.person}){
+    return (
+        //색깔, 이름
+    )
+}

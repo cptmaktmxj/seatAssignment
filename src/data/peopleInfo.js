@@ -1,4 +1,4 @@
-export const people = [
+export const students = [
   { id: "1", name: "강아지", gender: "F", studentId: 2025000001 },
   { id: "2", name: "고영희", gender: "M", studentId: 2025000002 },
   { id: "3", name: "김민주", gender: "F", studentId: 2023000000 },
