@@ -1,13 +1,11 @@
 import {EachSeat} from "./seat"
 
-function SeatGrid({EachSeat}){
+function SeatGrid({EachSeat,rows,cols}){
     return (
-        <table></table>
+        <div className="seatGrid">
+
+        </div>
     )
-}
-
-function ColsInterval({colclick}){
-
 }
 
 //전체 자리 표시 and 행/열 사이 누르면 띄워지는 기능

@@ -1,9 +1,9 @@
 
 
-function Modal() {
+function Modal({students, onClose, onAssign}) {
     return(
         <div className="modalOverlay" onClick={onClose}>
-            <div className="Modal" onClick={(e) => e.stopPropagation()}>
+            <div className="modal" onClick={(e) => e.stopPropagation()}>
 
                 <div className="section">
                     <input value="엑셀파일 업로드" type="file" onChange={setShowFiles}/>
@@ -20,7 +20,7 @@ function Modal() {
                                 <option value="F">여</option>
                             </select>
                         </div>
-                        <button value="추가"></button>
+                        <button id="add-student-button" onClick={changeStudent}>추가</button>
                     </form>
                 </div>
 
@@ -29,6 +29,10 @@ function Modal() {
                     <table>
                         
                     </table> 
+                </div>
+
+                <div className="section">
+                    <button id="assign-start-button" onClick={handleAssign}>배치 시작</button>
                 </div>
 
             </div>

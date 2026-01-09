@@ -1,1 +1,3 @@
-//랜덤배치 로직
+export function random(seats,students){
+    return 
+}
