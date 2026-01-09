@@ -24,7 +24,7 @@ function App(){
       </main>
       <Footer />
 
-      {isModalOpen && (<Modal/>)}
+      {isModalOpen && (<modalOverlay/>)}
 
     </div>
   )
