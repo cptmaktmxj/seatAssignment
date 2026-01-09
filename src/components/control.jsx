@@ -13,7 +13,7 @@ function setRowsCols(){
         </ul>
         <input type="button" value="선택"/>
         </form> 
-    );
+    )
 }
 
 <button onClick={showModal}>배치 시작</button>

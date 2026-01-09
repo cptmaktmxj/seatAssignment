@@ -1,17 +1,12 @@
 import {useState} from 'react'
+import { initialSeats, createSeats } from "./data/initialSeats"
+import { students as initialStudents } from "./data/studentsInfo"
 
-export function createSeats(rows, cols) {
-  return Array.from({ length: rows * cols }, (_, i) => ({
-    id: i,
-    row: 1,
-    col: 1,
-    person: null,
-    fixed: false
-  }))
-} //초기상태의 각 자리들의 행렬을 만듦
+//자리,학생 상태 선언
+const [seats, setSeats] = useState(createSeats(6,6))
+const [students,setStudents] = useState(initialStudents)
 
-const [seats, setSeats] = useState(createSeats(5, 6)) //배열 선언
-const [students,setStudents] = useState(addStudent("name",0000000000,"M"))
+
 
 function Seat({ seat }) {
   return (
@@ -36,5 +31,3 @@ function toggleFixed(seats, seatId) {
       : seat
   )
 }
-
-

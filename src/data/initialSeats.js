@@ -1,7 +1,8 @@
 export const initialSeats = {
   rows: 6,
   cols: 6,
-  fixedSeats: []
+  fixedSeats: [],
+  removedSeats: []
 }
 
 export function createSeats(rows, cols) {
