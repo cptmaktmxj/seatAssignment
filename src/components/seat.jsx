@@ -1,7 +1,5 @@
-
-
-function showSeats({seat.fixed},{seat.removed},{seat.person}){
+function EachSeat({seat, onClick}){
     return (
-        //색깔, 이름
+        //fixed와 removed 여부에 따라 onClick 반응
     )
 }

@@ -17,3 +17,11 @@
 <table>
     //학생 명단 + 삭제 기능
 </table>
+
+function Modal() {
+    return(
+       <div className="Modal">
+
+        </div> 
+    )
+}

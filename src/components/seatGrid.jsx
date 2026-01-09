@@ -1,10 +1,12 @@
-function setSeatGrid({rows},{cols}){
+import {EachSeat} from "./seat"
+
+function SeatGrid({EachSeat}){
     return (
         <table></table>
     )
 }
 
-function setColsInterval({colclick}){
+function ColsInterval({colclick}){
 
 }
 
