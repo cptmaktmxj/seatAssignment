@@ -12,7 +12,7 @@ export function createSeats(rows, cols) {
 
     return {
       id: `${row}-${col}`,
-      personId: null,
+      studentName: null,
       fixed: false,
       removed: false
     }

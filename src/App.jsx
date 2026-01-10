@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { initialSeats, createSeats } from "./data/initialSeats"
+import { createSeats } from "./data/initialSeats"
 import { students as initialStudents } from "./data/studentsInfo"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -15,29 +15,45 @@ function App(){
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   function toggleSeat(){
-
+      const seat = seats[r * cols + c]
+      onSeatClick()
+      //seat 상태 토글 조건문
   }
 
   function handleAssign(){
-      const result=random(seats,students)
-      setSeats(result)
+      const newSeat=random(seats,students)
+      setSeats(newSeat)
   }
 
-  function handleStudent(){
-    const newStudents=
+  function handleSave(){
+    //storage.js에 저장
+  }
+
+  function handleReset(){
+    //자리 상태와 자리 표시 초기화, 학생은 냅둠
+  }
+
+  function handleAddStudent(){
+    const newStudents= //학생 명단 추가 구현
+    setStudents(newStudents)
+  }
+
+  function handleDeleteStudent(){
+    Array.from({length: students}, ()=>{const student = students[students]}) 
+    const newStudents= //학생 명단 삭제 구현(student.id로 학생 구분)
     setStudents(newStudents)
   }
 
   return (
     <div className="app">
-
       <Header />
       <main>
-        <seatGrid seats={seats} onSeatClick={toggleSeat} onColsClick={makeInterval}/>
+        <seatGrid rows={rows} cols={cols} studentName={studentName} seats={seats} onSeatClick={toggleSeat}/>
         <rowsAndColsForm/>
+        <controlButtons/>
         <assignStartButton onClick={() => setIsModalOpen(true)}/>
-        <saveButton onClick={저장 함수}/>
-        <resetButton onClick={}/>
+        <saveButton onClick={handleSave}/>
+        <resetButton onClick={handleReset}/>
       </main>
       <Footer />
 
@@ -45,9 +61,9 @@ function App(){
       students={students}
       onClose={() => setIsModalOpen(false)}
       onAssign={handleAssign}
-      changeStudent={handleStudent}
+      addStudent={handleAddStudent}
+      deleteStudent={handleDeleteStudent}
       />)}
-
     </div>
   )
   
