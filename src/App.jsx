@@ -7,7 +7,7 @@ import seatGrid from "./components/seatGrid"
 import {rowsAndColsForm,assignStartButton,saveButton,resetButton} from "./components/control"
 import modal from "./components/modal"
 import random from "./utils/random"
-
+//gitcommandtest
 
 function App(){
   const [seats, setSeats] = useState(createSeats(6,6))
