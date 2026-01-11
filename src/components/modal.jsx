@@ -1,5 +1,3 @@
-
-
 function Modal({students, onClose, addStudent, deleteStudent, handleAssign}) {
     return(
         <div className="modalOverlay" onClick={onClose}>
@@ -27,9 +25,27 @@ function Modal({students, onClose, addStudent, deleteStudent, handleAssign}) {
                 <div className="section">
                     <h4>학생 명단</h4>
                     <table>
-                        //학생 이름,학번,성별만 보이게
-                        //각 행별로 삭제버튼도 구현 onClick={() => handleDeleteStudent(student.id)}
-                    </table> 
+                        <tbody>
+                            {Array.from({ length: rows }, (_, r) => (
+                            <tr key={r}>
+                                const student = students[students]
+    
+                                const className =
+                                    "seat" +
+                                    (seat.fixed ? " seat--fixed" : "") +
+                                    (seat.removed ? " seat--removed" : "")
+
+                                return (
+                                    <td
+                                    key={student.id} //삭제 시 학생의 id를 핸들러에 넘겨줌
+                                    className={className}
+                                    onClick={() => deleteStudent(student.id)} //클릭을 받는 부분인데 버튼형식으로 구현해야됨
+                                    >
+                                    </td>
+                                ))}
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div className="section">

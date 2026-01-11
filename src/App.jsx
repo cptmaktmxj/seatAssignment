@@ -16,7 +16,8 @@ function App(){
 
   function toggleSeat(){
       const seat = seats[r * cols + c]
-      onSeatClick()
+      onSeatClick=
+      {(seat.fixed, seat.removed)=>{!(seat.fixed),!(seat.removed)}}
       //seat 상태 토글 조건문
   }
 
@@ -39,7 +40,7 @@ function App(){
   }
 
   function handleDeleteStudent(){
-    Array.from({length: students}, ()=>{const student = students[students]}) 
+    Array.from(()=>{const student = students[students]}) //students 배열의 각 원소를 student로 정의
     const newStudents= //학생 명단 삭제 구현(student.id로 학생 구분)
     setStudents(newStudents)
   }
