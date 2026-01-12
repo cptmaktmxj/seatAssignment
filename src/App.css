@@ -12,3 +12,37 @@
 .seat--removed {
   border: 2px dashed #aaa;
 }
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.app__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.app__seatgrid {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+}
