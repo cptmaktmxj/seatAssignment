@@ -15,10 +15,17 @@ function App(){
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   function toggleSeat(){
-      const seat = seats[r * cols + c]
-      onSeatClick=
-      {(seat.fixed, seat.removed)=>{!(seat.fixed),!(seat.removed)}}
-      //seat 상태 토글 조건문
+      setSeats(prevSeats =>
+      prevSeats.map((seat, i) =>
+        i === index
+          ? {
+              ...seat,
+              fixed: !seat.fixed,
+              removed: !seat.removed
+            }
+          : seat
+      )
+    )
   }
 
   function handleAssign(){
